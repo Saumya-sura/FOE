@@ -1,0 +1,26 @@
+body
+{
+    background-image: url("IMG-20250110-WA0002.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    opacity: 0.5;
+}
+header
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+.nav-bar
+{
+    padding-left: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content:space-evenly;
+}
+.main-logo
+{
+    padding-left: 40%;
+}
