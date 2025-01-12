@@ -57,6 +57,35 @@ i {
     transition: left 0.3s ease-in-out;
     z-index: 1000;
 }
+.drawer-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+   
+}
+
+.back-button {
+    display: flex;
+    position: relative;
+ text-align: center;
+ align-items: center;
+    gap: 5px;
+    padding: 8px 15px;
+    font-size: 14px;
+    width: 20%;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
+
 
 .drawer.open {
     left: 0; 
