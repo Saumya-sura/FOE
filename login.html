@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KC</title>
+    <link rel="stylesheet" href="logIn.css">
+</head>
+<body>
+  <div class="logincontainer">
+    <h2>Login</h2>
+    <form action="/submit" method="POST">
+      <div class="inputgroup">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+      </div>
+      <div class="inputgroup">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="loginbtn">Login</button>
+    </form>
+  </div>
+</body>
+</html>
