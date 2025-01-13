@@ -46,16 +46,35 @@
         </div>
     </header>
 
-    <!-- Drawer -->
     <div class="drawer" id="drawer">
-        <div class="drawer-content">
+        <div class="drawer-header">
+            <button class="back-button" onclick="toggleDrawer()">
+                <i class="fa-solid fa-arrow-left"></i> 
+            </button>
+        </div>
             <h3>Categories</h3>
             <ul>
-                <li><a href="#">Laptops</a></li>
-                <li><a href="#">Desktops</a></li>
-                <li><a href="#">Graphics Cards</a></li>
-                <li><a href="#">Processors</a></li>
-                <li><a href="#">Accessories</a></li>
+                <li><a href="#">CPU</a></li>
+<li><a href="#">Motherboard</a></li>
+<li><a href="#">RAM</a></li>
+<li><a href="#">GPU</a></li>
+<li><a href="#">SSD</a></li>
+<li><a href="#">Hard Disk</a></li>
+<li><a href="#">Battery</a></li>
+<li><a href="#">SMPS</a></li>
+<li><a href="#">Cooler</a></li>
+<li><a href="#">Cabinet</a></li>
+<li><a href="#">Powercord</a></li>
+<li><a href="#">Mouse</a></li>
+<li><a href="#">Monitor</a></li>
+<li><a href="#">Keyboard</a></li>
+<li><a href="#">Speaker</a></li>
+<li><a href="#">External HD</a></li>
+<li><a href="#">Laptop Case</a></li>
+<li><a href="#">Mouse Pad</a></li>
+<li><a href="#">Webcam</a></li>
+<li><a href="#">Cables</a></li>
+<li><a href="#">Pendrive</a></li>
             </ul>
         </div>
     </div>
@@ -160,10 +179,11 @@
 
     <script>
        
-        function toggleDrawer() {
-            const drawer = document.getElementById('drawer');
-            drawer.classList.toggle('open');
-        }
+       function toggleDrawer() {
+    const drawer = document.getElementById('drawer');
+    drawer.classList.toggle('open');
+}
+
     </script>
 </body>
 </html>
