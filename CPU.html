@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <link rel="stylesheet" href="homepage.css">
+    <title>Ram</title>
+    <link rel="stylesheet" href="cabinet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -23,11 +23,7 @@
                 </div>
             </div>
             <div class="center-section">
-                <div class="name">
-                    <div class="icon">
-                        <img src="image-removebg-preview.png">
-                    </div>
-                </div>
+                <p style="font-size: 100px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bolder; color: rgb(14, 14, 63);">CPU</p>
             </div>
             <div class="right-section">
                 <div class="heart-icon">
@@ -45,12 +41,15 @@
             </div>
         </div>
     </header>
+    <script>       
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
+    <!-- Drawer -->
     <div class="drawer" id="drawer">
-        <div class="drawer-header">
-            <button class="back-button" onclick="toggleDrawer()">
-                <i class="fa-solid fa-arrow-left"></i> 
-            </button>
-        </div>
+        <div class="drawer-content">
             <h3>Categories</h3>
             <ul>
                 <li><a href="#">CPU</a></li>
@@ -77,95 +76,96 @@
             </ul>
         </div>
     </div>
-
-    
     <div class="search-panel">
         <input type="text" placeholder="Search here" class="search-bar">
         <button><i class="fa-solid fa-magnifying-glass yo"></i></button>
     </div>
     <div class="top-pick">
-        <h1>Latest Launch</h1>
+        <h1 style="text-decoration: underline;">Intel</h1>
     </div>
-
-  
     <div class="section-1">
         <div class="box-1 styling">
-            <img src="GPU.jpg" alt="GPU">
-            <p>GEFORCE RTX 4090 Gaming X Trio 24G GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 3 Ada Lovelace Architecture Graphics Card (RTX 4090 Gaming Trio 24G)
-                <br>
-                Save:14% Price :₹2,99,990<br>
-                M.R.P: <strike>₹3,48,998</strike>
+            <img src="i9 14Gen.jpg" alt="GPU">
+           <p>Intel Core I9-14900K LGA 1700 New Gaming Desktop Processor 24 Cores (8 P-Cores + 16 E-Cores) with Integrated Graphics - Unlocked<br>
+                Save:20%Price : ₹75,999<br>
+                M.R.P: <strike>₹95,000
+                </strike>
             </p>
         </div>
         <div class="box-2 styling">
-            <img src="AMD.jpg" alt="CPU">
+            <img src="i7 13gen.jpg" alt="CPU">
             <p>
-                AMD Ryzen 9 9950X Desktop Processor Zen 5 Architecture with Integrated Radeon Graphics, 16 cores 32 Threads 64MB Cache, Base Clock 4.3GHz Upto 5.7GHz AM5 Socket, System Memory DDR5-100-100001277WOF
-                <br>
-                Save:34% Price:₹66,799
-                <br>
-                M.R.P:<strike>₹1,00,600</strike>
+
+                
+                Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700   <br>
+                Save:48% Price:₹34,999
+                <br>    
+                M.R.P:<strike> ₹66,900</strike>
             </p>
         </div>
         <div class="box-3 styling">
-            <img src="MOUSE.jpg" alt="mouse">
+            <img src="i5 13gen.jpg" alt="mouse">
             <p>
-                Razer Viper V3 Pro Wireless Esports Gaming Mouse: Symmetrical - 54g Lightweight - 8K Polling - 35K DPI Optical Sensor - Gen3 Optical Switches - 8 Programmable Buttons - 95 Hr Battery - White
+                
+                Intel Core I5-13400F Processor 20M Cache, Up to 4.60 Ghz, LGA 1700   
+                <br>  Save:43% Price:₹28,650
                 <br>
-                Save:35% Price:₹16,974
-                <br>
-                M.R.P: <strike>₹25,999</strike>
+                M.R.P: <strike> ₹60,000</strike>
             </p>
         </div>
         <div class="box-4 styling">
-            <img src="Keyboard.jpg" alt="keyboard">
+            <img src="i3 13Gen.jpg" alt="keyboard">
             <p>
-                Logitech G915 X Lightspeed TKL Low-Profile Wireless Gaming Keyboard, Double-Shot PBT Keycaps, Fully Programmable Keys, RGB Backlighting, Sleek Aluminum Finishing, GL Brown Tactile - PC/Mac- Black
-                <br>
-                Save:13% Price: ₹20,995
+
+                Click to open expanded view
+                Intel Core I3-13100F Processor Lga 1700 12M Cache,Up to 4.50 Ghz
+                <br>                Save:13% Price: ₹20,995
                 <br>
                 M.R.P: <strike>₹23,995</strike>
             </p>
         </div>
     </div>
-
-    <h1 style="color: rgb(14,14,63); padding:40px;">Deals for the Day</h1>
+    <h1 style="color: rgb(14, 14, 63);text-decoration:underline;padding:40px;">AMD Ryzen</h1>
     <div class="section-2">
         <div class="box-1 styling">
-            <img src="LAPTOP.jpg" alt="LAPTOP">
-            <p>ASUS Vivobook 16, IntelCore™ i3-1215U 12th Gen, Thin and Light Laptop, 16-inch (40.64 cm) FHD+, (8 GB RAM/512GB SSD/Windows 11/Fingerprint/Black/1.88kg), X1605ZAB-MB322WS
+            <img src="Ryzen 9 9950X+.jpg" alt="LAPTOP">
+            <p>
+
+                AMD Ryzen 9 9950X Desktop Processor Zen 5 Architecture with Integrated Radeon Graphics, 16 cores 32 Threads 64MB Cache, Base Clock 4.3GHz Upto 5.7GHz AM5 Socket, System Memory DDR5-100-100001277WOF
+                <br>                    Save:41% Price:₹58,998
                 <br>
-                Save:43% Price : ₹31,990<br>
-                M.R.P: <strike>₹55,990</strike>
+                M.R.P:<strike> ₹1,00,600</strike>
             </p>
         </div>
         <div class="box-2 styling">
-            <img src="MOTHERBOARD.jpg" alt="motherboard">
+            <img src="Ryzen 7.jpg" alt="motherboard">
             <p>
-                MSI MEG Z790 ACE MAX Motherboard, E-ATX - Supports 14th/13th/12th Gen Intel Core Processors, LGA 1700-105A SPS VRM, DDR5 7800+MHz/OC, PCIe 5.0 x16, M.2 Gen5, Dual
+                AMD Ryzen 7 9700X Desktop Processor with Integrated Radeon Graphics, 8 cores 16 Threads 32 MB Cache Base Clock 3.8 GHz Up to 5.5 GHz AM5 Socket System Memory DDR5,65W TDP - 100-100001404WOF
                 <br>
-                Save:37% Price:₹79,199
-                <br>
-                M.R.P:<strike> ₹1,24,999</strike>
+                Save:35% Price : ₹33,990<br>
+                M.R.P: <strike> ₹52,000</strike>
             </p>
+
         </div>
         <div class="box-3 styling">
-            <img src="RAM.jpg" alt="RAM">
+            <img src="Ryzen 5.jpg">
             <p>
-                TeamGroup T-Force Delta RGB 16GB 6000MHz (6000MT/s) CL38 White DDR5 Desktop Gaming Memory.<br>
-                Save:62% Price:₹5,349
+
+
+                Click to open expanded view
+                AMD Ryzen 5 9600X Desktop Processor with Integrated Radeon Graphics, 6 cores 12 Threads 32 MB Cache Base Clock 3.9GHz Upto 5.4GHz AM5 Socket, Memory DDR5 Up to 5600 MT/s, 65W TDP - 100-100001405WOF                <br>
+                 Save:43% Price:₹23,999
                 <br>
-                M.R.P: <strike>₹14,000</strike>
+                M.R.P: <strike>₹42,000</strike>
             </p>
         </div>
         <div class="box-4 styling">
-            <img src="PRINTER.jpg" alt="printer">
+            <img src="Threadripper.jpg" alt="printer">
             <p>
-                HP Color Laserjet Pro MFP M183FW
+                AMD Ryzen Threadripper Pro Series Ryzen Threadripper Pro 5995WX Desktop Processor 64 cores 128 Threads 299 MB Cache 2.7 GHz Upto 4.5 GHz sWRX8 Socket (100-100000444WOF)                <br>
+                Save:41% Price: ₹5,33,499
                 <br>
-                Save:6% Price: ₹69,459
-                <br>
-                M.R.P: <strike>₹73,542</strike>
+                M.R.P: <strike>₹8,99,250</strike>
             </p>
         </div>
     </div>
@@ -174,13 +174,5 @@
             <p><i class="fa-regular fa-copyright yo end"></i>Copyright 2025. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-       
-       function toggleDrawer() {
-    const drawer = document.getElementById('drawer');
-    drawer.classList.toggle('open');
-}
-    </script>
 </body>
 </html>
