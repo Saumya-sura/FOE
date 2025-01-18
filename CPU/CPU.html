@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ram</title>
+    <link rel="stylesheet" href="CPU.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="left-section">
+                <div class="menu-icon" onclick="toggleDrawer()">
+                    <i class="fa-solid fa-bars"></i>
+                    <a href="#"><p class="t1"></p></a>
+                </div>
+                <div class="home-icon">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#"><p class="t1"></p></a>
+                </div>
+            </div>
+            <div class="center-section">
+                <p style="font-size: 100px; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-weight:bolder; color: rgb(14, 14, 63);">CPU</p>
+            </div>
+            <div class="right-section">
+                <div class="heart-icon">
+                    <i class="fa-solid fa-heart"></i>
+                    <a href="#"><p class="t1" style="font-size: xx-small;"></p></a>
+                </div>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="#"><p class="t1"></p></a>
+                </div>
+                <div class="log-in-icon">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <a href="#"><p class="t1">Log In</p></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="CPU.js"></script> 
+    <!-- Drawer -->
+    <div class="drawer" id="drawer">
+        <div class="drawer-content">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#">CPU</a></li>
+<li><a href="#">Motherboard</a></li>
+<li><a href="#">RAM</a></li>
+<li><a href="#">GPU</a></li>
+<li><a href="#">SSD</a></li>
+<li><a href="#">Hard Disk</a></li>
+<li><a href="#">Battery</a></li>
+<li><a href="#">SMPS</a></li>
+<li><a href="#">Cooler</a></li>
+<li><a href="#">Cabinet</a></li>
+<li><a href="#">Powercord</a></li>
+<li><a href="#">Mouse</a></li>
+<li><a href="#">Monitor</a></li>
+<li><a href="#">Keyboard</a></li>
+<li><a href="#">Speaker</a></li>
+<li><a href="#">External HD</a></li>
+<li><a href="#">Laptop Case</a></li>
+<li><a href="#">Mouse Pad</a></li>
+<li><a href="#">Webcam</a></li>
+<li><a href="#">Cables</a></li>
+<li><a href="#">Pendrive</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="search-panel">
+        <input type="text" placeholder="Search here" class="search-bar">
+        <button><i class="fa-solid fa-magnifying-glass yo"></i></button>
+    </div>
+    <div class="top-pick">
+        <h1 style="text-decoration: underline;">Intel</h1>
+    </div>
+    <div class="section-1">
+        <div class="box-1 styling" onclick="I1()">
+            <img src="i9 14Gen.jpg" alt="GPU">
+           <p>Intel Core I9-14900K LGA 1700 New Gaming Desktop Processor 24 Cores (8 P-Cores + 16 E-Cores) with Integrated Graphics - Unlocked<br>
+                Save:20%Price : ₹75,999<br>
+                M.R.P: <strike>₹95,000
+                </strike>
+            </p>
+        </div>
+        <div class="box-2 styling"onclick="I2()">
+            <img src="i7 13gen.jpg" alt="CPU">
+            <p>
+
+                
+                Intel Core i7-13700K Desktop Processor 16 cores (8 P-cores + 8 E-cores) 30M Cache, up to 5.4 GHz Socket LGA 1700   <br>
+                Save:48% Price:₹34,999
+                <br>    
+                M.R.P:<strike> ₹66,900</strike>
+            </p>
+        </div>
+        <div class="box-3 styling" onclick="I3()">
+            <img src="i5 13gen.jpg" alt="mouse">
+            <p>
+                
+                Intel Core I5-13400F Processor 20M Cache, Up to 4.60 Ghz, LGA 1700   
+                <br>  Save:43% Price:₹28,650
+                <br>
+                M.R.P: <strike> ₹60,000</strike>
+            </p>
+        </div>
+        <div class="box-4 styling" onclick="I4()">
+            <img src="i3 13Gen.jpg" alt="keyboard">
+            <p>
+
+                Click to open expanded view
+                Intel Core I3-13100F Processor Lga 1700 12M Cache,Up to 4.50 Ghz
+                <br>                Save:13% Price: ₹20,995
+                <br>
+                M.R.P: <strike>₹23,995</strike>
+            </p>
+        </div>
+    </div>
+    <h1 style="color: rgb(14, 14, 63);text-decoration:underline;padding:40px;">AMD Ryzen</h1>
+    <div class="section-2">
+        <div class="box-1 styling" onclick="I5()">
+            <img src="Ryzen 9 9950X+.jpg" alt="LAPTOP">
+            <p>
+
+                AMD Ryzen 9 9950X Desktop Processor Zen 5 Architecture with Integrated Radeon Graphics, 16 cores 32 Threads 64MB Cache, Base Clock 4.3GHz Upto 5.7GHz AM5 Socket, System Memory DDR5-100-100001277WOF
+                <br>                    Save:41% Price:₹58,998
+                <br>
+                M.R.P:<strike> ₹1,00,600</strike>
+            </p>
+        </div>
+        <div class="box-2 styling"onclick="I6()">
+            <img src="Ryzen 7.jpg" alt="motherboard">
+            <p>
+                AMD Ryzen 7 9700X Desktop Processor with Integrated Radeon Graphics, 8 cores 16 Threads 32 MB Cache Base Clock 3.8 GHz Up to 5.5 GHz AM5 Socket System Memory DDR5,65W TDP - 100-100001404WOF
+                <br>
+                Save:35% Price : ₹33,990<br>
+                M.R.P: <strike> ₹52,000</strike>
+            </p>
+
+        </div>
+        <div class="box-3 styling" onclick="I7()">
+            <img src="Ryzen 5.jpg">
+            <p>
+
+                AMD Ryzen 5 9600X Desktop Processor with Integrated Radeon Graphics, 6 cores 12 Threads 32 MB Cache Base Clock 3.9GHz Upto 5.4GHz AM5 Socket, Memory DDR5 Up to 5600 MT/s, 65W TDP - 100-100001405WOF                <br>
+                 Save:43% Price:₹23,999
+                <br>
+                M.R.P: <strike>₹42,000</strike>
+            </p>
+        </div>
+        <div class="box-4 styling" onclick="I8()">
+            <img src="Threadripper.jpg" alt="printer">
+            <p>
+                AMD Ryzen Threadripper Pro Series Ryzen Threadripper Pro 5995WX Desktop Processor 64 cores 128 Threads 299 MB Cache 2.7 GHz Upto 4.5 GHz sWRX8 Socket (100-100000444WOF)                <br>
+                Save:41% Price: ₹5,33,499
+                <br>
+                M.R.P: <strike>₹8,99,250</strike>
+            </p>
+        </div>
+    </div>
+    <footer>
+        <div class="end">
+            <p><i class="fa-regular fa-copyright yo end"></i>Copyright 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
