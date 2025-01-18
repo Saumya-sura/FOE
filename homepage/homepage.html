@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer">
+          
+    <script src="homepage.js"></script>
 </head>
 <body>
     <header>
@@ -89,15 +91,15 @@
 
   
     <div class="section-1">
-        <div class="box-1 styling">
-            <img src="GPU.jpg" alt="GPU">
+        <div class="box-1 styling" onclick="EnlargeH1()">
+            <img src="GPU.png" alt="GPU">
             <p>GEFORCE RTX 4090 Gaming X Trio 24G GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 3 Ada Lovelace Architecture Graphics Card (RTX 4090 Gaming Trio 24G)
                 <br>
                 Save:14% Price :₹2,99,990<br>
                 M.R.P: <strike>₹3,48,998</strike>
             </p>
         </div>
-        <div class="box-2 styling">
+        <div class="box-2 styling" onclick="EnlargeH2()">
             <img src="AMD.jpg" alt="CPU">
             <p>
                 AMD Ryzen 9 9950X Desktop Processor Zen 5 Architecture with Integrated Radeon Graphics, 16 cores 32 Threads 64MB Cache, Base Clock 4.3GHz Upto 5.7GHz AM5 Socket, System Memory DDR5-100-100001277WOF
@@ -107,7 +109,7 @@
                 M.R.P:<strike>₹1,00,600</strike>
             </p>
         </div>
-        <div class="box-3 styling">
+        <div class="box-3 styling" onclick="EnlargeH3()">
             <img src="MOUSE.jpg" alt="mouse">
             <p>
                 Razer Viper V3 Pro Wireless Esports Gaming Mouse: Symmetrical - 54g Lightweight - 8K Polling - 35K DPI Optical Sensor - Gen3 Optical Switches - 8 Programmable Buttons - 95 Hr Battery - White
@@ -117,7 +119,7 @@
                 M.R.P: <strike>₹25,999</strike>
             </p>
         </div>
-        <div class="box-4 styling">
+        <div class="box-4 styling" onclick="EnlargeH4()">
             <img src="Keyboard.jpg" alt="keyboard">
             <p>
                 Logitech G915 X Lightspeed TKL Low-Profile Wireless Gaming Keyboard, Double-Shot PBT Keycaps, Fully Programmable Keys, RGB Backlighting, Sleek Aluminum Finishing, GL Brown Tactile - PC/Mac- Black
@@ -131,7 +133,7 @@
 
     <h1 style="color: rgb(14,14,63); padding:40px;">Deals for the Day</h1>
     <div class="section-2">
-        <div class="box-1 styling">
+        <div class="box-1 styling" onclick="EnlargeH5()">
             <img src="LAPTOP.jpg" alt="LAPTOP">
             <p>ASUS Vivobook 16, IntelCore™ i3-1215U 12th Gen, Thin and Light Laptop, 16-inch (40.64 cm) FHD+, (8 GB RAM/512GB SSD/Windows 11/Fingerprint/Black/1.88kg), X1605ZAB-MB322WS
                 <br>
@@ -139,7 +141,7 @@
                 M.R.P: <strike>₹55,990</strike>
             </p>
         </div>
-        <div class="box-2 styling">
+        <div class="box-2 styling" onclick="EnlargeH6()">
             <img src="MOTHERBOARD.jpg" alt="motherboard">
             <p>
                 MSI MEG Z790 ACE MAX Motherboard, E-ATX - Supports 14th/13th/12th Gen Intel Core Processors, LGA 1700-105A SPS VRM, DDR5 7800+MHz/OC, PCIe 5.0 x16, M.2 Gen5, Dual
@@ -149,7 +151,7 @@
                 M.R.P:<strike> ₹1,24,999</strike>
             </p>
         </div>
-        <div class="box-3 styling">
+        <div class="box-3 styling" onclick="EnlargeH7()">
             <img src="RAM.jpg" alt="RAM">
             <p>
                 TeamGroup T-Force Delta RGB 16GB 6000MHz (6000MT/s) CL38 White DDR5 Desktop Gaming Memory.<br>
@@ -158,7 +160,7 @@
                 M.R.P: <strike>₹14,000</strike>
             </p>
         </div>
-        <div class="box-4 styling">
+        <div class="box-4 styling" onclick="EnlargeH8()">
             <img src="PRINTER.jpg" alt="printer">
             <p>
                 HP Color Laserjet Pro MFP M183FW
@@ -175,12 +177,5 @@
         </div>
     </footer>
 
-    <script>
-       
-       function toggleDrawer() {
-    const drawer = document.getElementById('drawer');
-    drawer.classList.toggle('open');
-}
-    </script>
 </body>
 </html>

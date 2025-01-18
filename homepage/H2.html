@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="H2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <script>
+        function toggleDrawer() {
+            const drawer = document.getElementById('drawer');
+            drawer.classList.toggle('open');
+        }
+    </script>
+    <header>
+        <div class="navbar">
+            <div class="left-section">
+                <div class="menu-icon" onclick="toggleDrawer()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="home-icon">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </div>
+            <div class="center-section">
+                <div class="name">
+                    <div class="icon">
+                        <img src="image-removebg-preview.png" alt="Logo">
+                    </div>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="heart-icon">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </div>
+                <div class="log-in-icon">
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="drawer" id="drawer">
+        <div class="drawer-header">
+            <button class="back-button" onclick="toggleDrawer()">
+                <i class="fa-solid fa-arrow-left"></i> 
+            </button>
+        </div>
+        <h3>Categories</h3>
+        <ul>
+            <li><a href="#">CPU</a></li>
+            <li><a href="#">Motherboard</a></li>
+            <li><a href="#">RAM</a></li>
+            <li><a href="#">GPU</a></li>
+            <li><a href="#">SSD</a></li>
+            <li><a href="#">Hard Disk</a></li>
+            <li><a href="#">Battery</a></li>
+            <li><a href="#">SMPS</a></li>
+            <li><a href="#">Cooler</a></li>
+            <li><a href="#">Cabinet</a></li>
+            <li><a href="#">Powercord</a></li>
+            <li><a href="#">Mouse</a></li>
+            <li><a href="#">Monitor</a></li>
+            <li><a href="#">Keyboard</a></li>
+            <li><a href="#">Speaker</a></li>
+            <li><a href="#">External HD</a></li>
+            <li><a href="#">Laptop Case</a></li>
+            <li><a href="#">Mouse Pad</a></li>
+            <li><a href="#">Webcam</a></li>
+            <li><a href="#">Cables</a></li>
+            <li><a href="#">Pendrive</a></li>
+        </ul>
+    </div>
+
+    <div class="box-contente">
+    <div class="image-section"></div>
+    <div class="content-section">
+        <p class="Content">
+            AMD Ryzen 9 9950X Desktop Processor Zen 5 Architecture with Integrated Radeon Graphics, 16 cores 32 Threads 64MB Cache, Base Clock 4.3GHz Upto 5.7GHz AM5 Socket, System Memory DDR5-100-100001277WOF
+           
+    <br><br><br>
+           <p style="color: orange;">  Save:34%  </p>  Price:₹66,799<br>
+            <p style="color: red;">M.R.P: <strike >₹1,00,600</strike></p>
+        </p>
+        Quantity:
+        <select class="Quantity">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <br><br>
+        <button class="Buy-Now">Buy Now</button>
+        <br><br>
+        <button class="Add-to-Cart">Add To Cart</button>     
+ 
+    </div>
+    </div>
+    <footer>
+        <div class="end">
+            <p><i class="fa-regular fa-copyright yo end"></i>Copyright 2025. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</div>
+</body>
+</html>
