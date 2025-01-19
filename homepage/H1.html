@@ -6,16 +6,190 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="H1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
-          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer">
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            margin: 20px;
+        }
+
+        .product-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-section img {
+            width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .details {
+            max-width: 400px;
+        }
+
+        .details p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .buttons {
+            margin-top: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: orange;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .btn.cart {
+            background-color: green;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+
+        .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .cart-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 100%;
+            background-color: white;
+            border-left: 1px solid #ddd;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .cart-container.open {
+            transform: translateX(0);
+        }
+
+        .cart-header {
+            padding: 10px;
+            background-color: orange;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-items-list {
+            padding: 10px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+    </style>
 </head>
 <body>
     <script>
+        let cartItems = [];
+
         function toggleDrawer() {
             const drawer = document.getElementById('drawer');
             drawer.classList.toggle('open');
         }
+
+        function addToCart() {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const item = {
+                name: 'GEFORCE RTX 4090',
+                price: 299990,
+                quantity: parseInt(document.querySelector('.Quantity').value),
+                image: 'https://via.placeholder.com/300'
+            };
+
+            const existingItem = cartItems.find(i => i.name === item.name);
+            if (existingItem) {
+                existingItem.quantity += item.quantity;
+            } else {
+                cartItems.push(item);
+            }
+
+            localStorage.setItem('cart', JSON.stringify(cartItems));
+            updateCart();
+            alert(item.name + " has been added to your cart!");
+        }
+
+        function updateCart() {
+            const cartContainer = document.getElementById('cart-container');
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartList = document.getElementById('cart-items-list');
+            cartList.innerHTML = cartItems.length
+                ? cartItems.map(item => `
+                    <div class="cart-item">
+                        <img src="${item.image}" alt="${item.name}">
+                        <div class="cart-item-info">
+                            <p>${item.name}</p>
+                            <p>Price: ₹${item.price} x ${item.quantity}</p>
+                        </div>
+                    </div>
+                `).join('')
+                : '<p>Your cart is empty!</p>';
+            document.getElementById('cart-count').textContent = cartItems.reduce((total, item) => total + item.quantity, 0);
+        }
+
+        function toggleCartDisplay() {
+            const cartContainer = document.getElementById('cart-container');
+            cartContainer.classList.toggle('open');
+        }
+
+        function clearCart() {
+            // Clear the cart from localStorage
+            localStorage.removeItem('cart');
+            
+            // Update the cart view
+            updateCart();
+            
+            // Optionally, show a message (or alert) confirming the cart is cleared
+            alert("Your cart has been cleared!");
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateCart();
+        });
     </script>
+
     <header>
         <div class="navbar">
             <div class="left-section">
@@ -37,12 +211,12 @@
                 <div class="heart-icon">
                     <i class="fa-solid fa-heart"></i>
                 </div>
-                <div class="cart-icon">
+                <div class="cart-icon" onclick="toggleCartDisplay()">
                     <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" class="cart-count">0</span>
                 </div>
                 <div class="log-in-icon">
                     <i class="fa-solid fa-right-to-bracket"></i>
-                    <br>
                 </div>
             </div>
         </div>
@@ -80,37 +254,45 @@
         </ul>
     </div>
 
-    <div class="box-contente">
-    <div class="image-section"></div>
-    <div class="content-section">
-        <p class="Content">
-            GEFORCE RTX 4090 Gaming X Trio 24G GDRR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 3 Ada Lovelace Architecture Graphics Card (RTX 4090 Gaming Trio 24G)
+    <!-- Cart Container (hidden by default) -->
+    <div id="cart-container" class="cart-container">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button onclick="toggleCartDisplay()"><i class="fa-solid fa-times"></i></button>
+            <!-- Clear Cart Button -->
+            <button onclick="clearCart()">Clear Cart</button>
+        </div>
+        <div id="cart-items-list"></div>
+    </div>
 
-    <br><br><br>
-           <p style="color: orange;"> Save:14%  </p>  Price :₹2,99,990<br>
-            <p style="color: red;">M.R.P: <strike >₹3,48,998</strike></p>
-        </p>
-        Quantity:
-        <select class="Quantity">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-        <br><br>
-        <button class="Buy-Now">Buy Now</button>
-        <br><br>
-        <button class="Add-to-Cart">Add To Cart</button>     
- 
+    <div class="box-contente">
+        <div class="image-section"></div>
+        <div class="content-section">
+            <p class="Content">
+                GEFORCE RTX 4090 Gaming X Trio 24G GDDR6X 384-Bit HDMI/DP Nvlink Tri-Frozr 3 Ada Lovelace Architecture Graphics Card (RTX 4090 Gaming Trio 24G)
+                <br><br><br>
+                <p style="color: orange;"> Save:14%  </p>  Price :₹2,99,990<br>
+                <p style="color: red;">M.R.P: <strike >₹3,48,998</strike></p>
+            </p>
+            Quantity:
+            <select class="Quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+            <br><br>
+            <button class="Buy-Now">Buy Now</button>
+            <br><br>
+            <button class="Add-to-Cart" onclick="addToCart()">Add To Cart</button>     
+        </div>
     </div>
-    </div>
+
     <footer>
         <div class="end">
             <p><i class="fa-regular fa-copyright yo end"></i>Copyright 2025. All Rights Reserved.</p>
         </div>
     </footer>
-
-</div>
 </body>
 </html>
