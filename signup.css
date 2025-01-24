@@ -2,7 +2,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to bottom right, #6a11cb, #2575fc);
+  background-image: url('IMG-20250110-WA0002.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;;
   display: flex;
   justify-content: center;
   align-items: center;
